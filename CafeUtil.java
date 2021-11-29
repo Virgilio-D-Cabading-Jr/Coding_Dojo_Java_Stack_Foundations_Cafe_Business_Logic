@@ -20,7 +20,7 @@ public class CafeUtil {
         return sum;
     }
 
-    //  //// Get Streak Goal /////////////////////////////////////////
+    //  //// Get Streak Goal | @param int numWeeks ////s////////////////
     //  Each week, a customer needs to purchase 1 more drink than they bought the previous week 
     //      to get some free drinks after specified number of weeks
     //  @return: int (sum from 1 to numWeeks)
@@ -30,5 +30,17 @@ public class CafeUtil {
             sum += i;
         }
         return sum;
+    }
+
+    //  //// Get Order Total /////////////////////////////////////////
+    //      Given an array of order prices, sum the prices and return the total 
+    //  @param: double[] prices
+    //  @return: double
+    public double getOrderTotal(double[] prices) {
+        double sum = 0;
+        for (double price : prices) {               // Iterate through each price in the prices array
+            sum += price;                           // Add each price to the sum
+        }
+        return sum;                                 // Return the sum total
     }
 }
