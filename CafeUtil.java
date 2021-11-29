@@ -60,11 +60,23 @@ public class CafeUtil {
     //      Add a customer to the customers in the queue
     //      then display how many people are ahead in the queue
     //      then display the entire queue
-    public void addCustomer(ArrayList<String> customersInLine) {
+    //  @return:    ArrayList<SDtring> updated Customers In Line
+    public ArrayList<String> addCustomer(ArrayList<String> customersInLine) {
         // System.out.println("Please enter your name: ");
 
         String userName = System.console().readLine("Please, enter your name: ");   // Get the User name from the user on the console
         System.out.printf("Hello, %s!\n", userName);
+        System.out.printf("There are %d people ahead of you in line.\n", customersInLine.size());
+        customersInLine.add(userName);
 
+        System.out.print("The current queue is: ");                     // Print to console all the customers in line
+        for (int i=0; i<customersInLine.size(); i++) {
+            System.out.print(customersInLine.get(i));
+            if (i<(customersInLine.size()-1)) {
+                System.out.print(", ");
+            }
+        }
+
+        return customersInLine;
     }
 }

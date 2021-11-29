@@ -40,8 +40,8 @@ public class TestCafe {
     ArrayList<String> customers = new ArrayList<String>();
     // --- Test 4 times ---
     for (int i = 0; i < 4; i++) {
-    appTest.addCustomer(customers);
-    System.out.println("\n");
+      customers = appTest.addCustomer(customers);
+      System.out.println("\n");
     }
   }
 }
